@@ -97,24 +97,3 @@ function escapeHtml(value) {
     return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[character];
   });
 }
-
-// Optional demo data makes it easy to reproduce test cases while learning.
-const demoCases = {
-  invalid: { name: "", email: "alex.example.com", age: "16", major: "", graduation: "2035", interest: "", experience: "50", introduction: "Too short" },
-  partial: { name: "Alex Morgan", email: "alex@example.com", age: "21", major: "Computer Science", graduation: "2028", interest: "", experience: "2", introduction: "I enjoy building useful web applications." },
-  valid: { name: "Alex Morgan", email: "alex@example.com", age: "21", major: "Computer Science", graduation: "2028", interest: "Web Development", experience: "2", introduction: "I enjoy building useful web applications." }
-};
-
-const demoName = new URLSearchParams(window.location.search).get("demo");
-if (demoCases[demoName]) {
-  const demo = demoCases[demoName];
-  fields.name.input.value = demo.name;
-  fields.email.input.value = demo.email;
-  fields.age.input.value = demo.age;
-  fields.major.input.value = demo.major;
-  fields.graduation.input.value = demo.graduation;
-  fields.interest.input.value = demo.interest;
-  fields.experience.input.value = demo.experience;
-  fields.introduction.input.value = demo.introduction;
-  profileForm.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
-}
