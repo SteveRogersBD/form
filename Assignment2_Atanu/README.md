@@ -1,9 +1,7 @@
-# Assignment 2: Student Activity Profile
+# Student Activity Profile
 
-Open `index.html` in a browser. The page uses three separate files:
+Open `index.html` in a browser to run the form.
 
-- `index.html` contains the form and labels.
-- `style.css` controls layout, colors, and valid/invalid field styles.
-- `script.js` reads the fields, validates them, and builds the profile preview.
-
-Before submitting, replace `Student` in the folder and ZIP names with your actual last name, and replace the placeholder ICE URL in the testing-results PDF with your real username.
+- `index.html` - form structure
+- `style.css` - page design and field states
+- `script.js` - validation and profile preview
