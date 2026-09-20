@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Activity Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="intro-card">
+      <p class="eyebrow">CS 315 • Assignment 2</p>
+      <h1>Student Activity Profile</h1>
+      <p class="intro-text">Complete the form to create a short academic and professional profile.</p>
+    </section>
+
+    <form id="profileForm" novalidate>
+      <div class="form-grid">
+        <div class="field-group full-width">
+          <label for="nameInput">Name</label>
+          <input type="text" id="nameInput" placeholder="e.g., Jordan Lee">
+          <small class="field-message" id="nameMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="emailInput">Email</label>
+          <input type="email" id="emailInput" placeholder="e.g., jordan@example.com">
+          <small class="field-message" id="emailMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="ageInput">Age</label>
+          <input type="number" id="ageInput" min="18" max="99" placeholder="18–99">
+          <small class="field-message" id="ageMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="majorInput">Major / Academic Area</label>
+          <select id="majorInput">
+            <option value="">Choose an area</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Cybersecurity</option>
+            <option>Data Science</option>
+            <option>Other</option>
+          </select>
+          <small class="field-message" id="majorMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="graduationInput">Expected Graduation Year</label>
+          <input type="number" id="graduationInput" min="2026" max="2032" placeholder="2026–2032">
+          <small class="field-message" id="graduationMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="interestInput">Activity / Interest / Project Area</label>
+          <select id="interestInput">
+            <option value="">Choose an interest</option>
+            <option>Web Development</option>
+            <option>Mobile Apps</option>
+            <option>Artificial Intelligence</option>
+            <option>Game Development</option>
+            <option>Cloud Computing</option>
+          </select>
+          <small class="field-message" id="interestMessage"></small>
+        </div>
+
+        <div class="field-group">
+          <label for="experienceInput">Years of Programming Experience</label>
+          <input type="number" id="experienceInput" min="0" max="40" placeholder="0–40">
+          <small class="field-message" id="experienceMessage"></small>
+        </div>
+
+        <div class="field-group full-width">
+          <label for="introductionInput">Short Introduction</label>
+          <textarea id="introductionInput" rows="4" placeholder="Tell us a little about your goals or interests..."></textarea>
+          <small class="field-message" id="introductionMessage"></small>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Preview Profile</button>
+        <button type="button" class="secondary-button" id="clearButton">Clear</button>
+      </div>
+
+      <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      <section id="summary" class="summary-card hidden" aria-live="polite"></section>
+    </form>
+  </main>
+</body>
+</html>
