@@ -1,5 +1,1 @@
-.gitignore
-output/Test_Case_1_Invalid.png
-output/Test_Case_2_Partially_Valid.png
-output/Test_Case_3_Valid.png
-output/Testing_Results_Aniruddha_Biswas_Atanu.pdf
+/output/
